@@ -189,8 +189,8 @@ fun MovieItem(
                 fontWeight = FontWeight.Bold,
                 textAlign = TextAlign.Center,
                 style = MaterialTheme.typography.titleLarge,
-                color = MaterialTheme.colorScheme.onSurfaceVariant
-            )
+                color = MaterialTheme.colorScheme.primary
+                )
 
             Card(
                 modifier = Modifier
@@ -208,7 +208,7 @@ fun MovieItem(
                     fontWeight = FontWeight.Bold,
                     textAlign = TextAlign.Center,
                     style = MaterialTheme.typography.bodySmall,
-                    color = if (movieList.adult) Red20 else MaterialTheme.colorScheme.onBackground
+                    color = if (movieList.adult) Red20 else MaterialTheme.colorScheme.secondary
                 )
             }
 

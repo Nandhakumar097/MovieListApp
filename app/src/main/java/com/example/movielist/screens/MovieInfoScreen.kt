@@ -64,6 +64,7 @@ fun MovieInfoScreen(
                     text = movieInfo.title,
                     style = MaterialTheme.typography.displaySmall,
                     fontWeight = FontWeight.Bold,
+                    color = MaterialTheme.colorScheme.primary,
                     modifier = Modifier
                         .fillMaxWidth()
                         .padding(start = 16.dp),
@@ -79,17 +80,20 @@ fun MovieInfoScreen(
                         modifier = Modifier,
                         text = movieInfo.release_date.take(4),
                         style = MaterialTheme.typography.bodyMedium,
+                        color = MaterialTheme.colorScheme.secondary
                     )
                     Text(
                         modifier = Modifier,
                         text = ".",
                         fontWeight = FontWeight.Bold,
                         style = MaterialTheme.typography.bodyMedium,
+                        color = MaterialTheme.colorScheme.secondary
                     )
                     Text(
                         modifier = Modifier,
                         text = "${movieInfo.runtime} min",
                         style = MaterialTheme.typography.bodyMedium,
+                        color = MaterialTheme.colorScheme.secondary
                     )
                 }
                 Spacer(modifier = Modifier.height(10.dp))
@@ -149,6 +153,7 @@ fun MovieInfoScreen(
                                         ),
                                         text = movieInfo.genres[position].name,
                                         style = MaterialTheme.typography.bodyMedium,
+                                        color = MaterialTheme.colorScheme.secondary
                                     )
                                 }
                             }
@@ -157,12 +162,14 @@ fun MovieInfoScreen(
                         Text(
                             text = movieInfo.original_title,
                             style = MaterialTheme.typography.bodyMedium,
-                            modifier = Modifier
+                            modifier = Modifier,
+                            color = MaterialTheme.colorScheme.primary
                         )
                         Spacer(modifier = Modifier.height(3.dp))
                         Text(
                             text = movieInfo.overview,
                             style = MaterialTheme.typography.bodySmall,
+                            color = MaterialTheme.colorScheme.secondary
                         )
                     }
 
@@ -183,27 +190,31 @@ fun MovieInfoScreen(
                         text = movieInfo.vote_average.toString().take(3),
                         fontWeight = FontWeight.Bold,
                         style = MaterialTheme.typography.bodyLarge,
+                        color = MaterialTheme.colorScheme.primary
                     )
                     Text(
                         modifier = Modifier,
                         text = "/10",
                         style = MaterialTheme.typography.labelSmall,
+                        color = MaterialTheme.colorScheme.secondary
                     )
                     Text(
                         modifier = Modifier.padding(start = 5.dp),
                         text = "${movieInfo.vote_count}(votes)",
                         style = MaterialTheme.typography.labelSmall,
+                        color = MaterialTheme.colorScheme.secondary
                     )
                     Icon(
                         Icons.Default.StarBorder, contentDescription = null,
-                        tint = Blue,
+                        tint = MaterialTheme.colorScheme.secondary,
                         modifier = Modifier.padding(start = 15.dp)
                     )
                     Text(
                         modifier = Modifier.padding(start = 3.dp),
                         text = "Rate",
                         fontWeight = FontWeight.Bold,
-                        style = MaterialTheme.typography.bodyLarge
+                        style = MaterialTheme.typography.bodyLarge,
+                        color = MaterialTheme.colorScheme.secondary
                     )
                 }
                 Spacer(modifier = Modifier.height(15.dp))
@@ -229,6 +240,7 @@ fun MovieInfoScreen(
                                 modifier = Modifier
                                     .fillMaxWidth()
                                     .padding(start = 10.dp, end = 10.dp, top = 5.dp, bottom = 5.dp),
+                                color = MaterialTheme.colorScheme.tertiary
                             )
                         }
                     }
@@ -276,7 +288,8 @@ fun ProductionCompany(productionCompany: ProductionCompany) {
                 style = MaterialTheme.typography.titleSmall,
                 modifier = Modifier
                     .fillMaxWidth()
-                    .align(Alignment.CenterHorizontally)
+                    .align(Alignment.CenterHorizontally),
+                color = MaterialTheme.colorScheme.secondary
             )
             Spacer(modifier = Modifier.height(15.dp))
 
